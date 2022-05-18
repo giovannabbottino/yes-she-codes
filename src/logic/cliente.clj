@@ -31,8 +31,13 @@
   lista-cliente
   )
 
-(defn cliente-lista? [lista-cliente cpf]
+(defmulti cliente-lista? (fn [i & other] (coll? i)))
+
+(defmethod cliente-lista? true [lista-cliente cpf]
   (filter #(= (:cpf %) cpf) lista-cliente))
+
+(defmethod cliente-lista? false [cpf]
+  (filter #(= (:cpf %) cpf) @(csv->lista-clientes  (atom []) "arquivos/clientes.csv")))
 
 (defn lista-cliente! [lista-cliente]
   (println @lista-cliente))
