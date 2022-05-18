@@ -48,7 +48,7 @@
   (filter #(= (:numero %) numero) lista-cartao))
 
 (defmethod cartao-lista? false [numero]
-  (filter #(= (:numero %) numero) @(csv->lista-clientes  (atom []) "arquivos/cartoes.csv")))
+  (filter #(= (:numero %) numero) @(csv->lista-cartoes  (atom []) "arquivos/cartoes.csv")))
 
 (defn pesquisa-cartao-por-id [lista-cartao id]
   (nth lista-cartao id))
