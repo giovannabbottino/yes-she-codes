@@ -1,5 +1,6 @@
 (ns logic.simulador
-  (:require [logic.cliente :refer :all]
+  (:require [logic.listas :refer :all]
+            [logic.cliente :refer :all]
             [logic.cartao :refer :all]
             [logic.compra :refer :all]
             [java-time :as t]))
@@ -7,15 +8,19 @@
 
 (def repositorio-de-clientes (atom []))
 
-(csv->lista-clientes repositorio-de-clientes "arquivos/clientes.csv")
+(csv->lista-clientes repositorio-de-clientes "../../arquivos/clientes.csv")
+
+(lista! repositorio-de-clientes)
 
 (def repositorio-de-cartao (atom []))
 
-(csv->lista-cartoes repositorio-de-cartao "arquivos/cartoes.csv")
+(csv->lista-cartoes repositorio-de-cartao "../../arquivos/cartoes.csv")
+
+(lista! repositorio-de-cartao)
 
 (def repositorio-de-compras (atom []))
 
-(csv->lista-compras repositorio-de-compras "arquivos/compras.csv")
+(csv->lista-compras repositorio-de-compras "../../arquivos/compras.csv")
 
 (println "Total gasto" (total-gasto @repositorio-de-compras))
 

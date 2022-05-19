@@ -8,3 +8,5 @@
 (deftest repositorio-de-compras-test
   (testing "Testando simbolo repositorio de compras atom"
     (is (instance? clojure.lang.Atom repositorio-de-compras))))
+
+

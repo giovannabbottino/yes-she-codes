@@ -1,5 +1,5 @@
 (ns models.cliente)
 
-(defrecord Cliente [nome
-                    cpf
-                    email])
+(defrecord Cliente [^String nome
+                    ^String cpf
+                    ^String email])

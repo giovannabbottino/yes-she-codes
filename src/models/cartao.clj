@@ -1,7 +1,8 @@
-(ns models.cartao)
+(ns models.cartao
+  (:import (java.time YearMonth)))
 
-(defrecord Cartao [numero
-                   cvv
-                   validade
-                   limite
-                   cliente])
+(defrecord Cartao [^BigInteger numero
+                   ^Integer cvv
+                   ^YearMonth validade
+                   ^BigDecimal limite
+                   ^String cliente])
