@@ -65,7 +65,7 @@
   (testing "Testa se o cartao enviado é realmente valido"
     (is (s/validate Cartao  (Cartao. 1234123412341234 (int 111) (t/year-month "2023-01") 1000M "000.111.222-33"))))
   (testing "Teste multipla vezes para cartao invalido"
-    (are [parametro-cliente] (thrown? Exception (s/validate Cartao parametro-cliente))
+    (are [parametro-cartao] (thrown? Exception (s/validate Cartao parametro-cartao))
                              [(Cartao. -1 111 (t/year-month "2023-01") 1000M "000.111.222-33")
                               (Cartao. 1234123412341234 1000 (t/year-month "2023-01") 1000M "000.111.222-33")
                               (Cartao. 1234123412341234 1000 nil 1000M "000.111.222-33")
