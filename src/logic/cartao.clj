@@ -12,7 +12,7 @@
     (Long/parseLong (str/replace numero " " ""))
     (Integer/parseInt cvv)
     (t/year-month validade)
-    (Double/parseDouble (str/replace limite "." ""))
+    (bigdec (str/replace limite "." ""))
     cpf))
 
 (defn csv->lista-cartoes [lista-cartao caminho-arquivo]
@@ -22,7 +22,7 @@
   lista-cartao)
 
 (defmethod item-lista? Long [numero]
-  (filter #(= (:numero %) numero) @(csv->lista-cartoes  (atom []) "../../arquivos/cartoes.csv")))
+  (filter #(= (:numero %) numero) @(csv->lista-cartoes  (atom []) "arquivos/cartoes.csv")))
 
 (defmethod valida-item Cartao [cartao]
   (let [cliente (first (item-lista? (:cliente cartao)))]

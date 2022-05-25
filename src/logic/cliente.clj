@@ -18,7 +18,7 @@
   lista-cliente)
 
 (defmethod item-lista? String [cpf]
-  (filter #(= (:cpf %) cpf) @(csv->lista-clientes  (atom []) "../../arquivos/clientes.csv")))
+  (filter #(= (:cpf %) cpf) @(csv->lista-clientes  (atom []) "arquivos/clientes.csv")))
 
 (defmethod valida-item Cliente [cliente]
   (and (not (nil? (:nome cliente)))
