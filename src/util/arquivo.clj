@@ -1,4 +1,4 @@
-(ns logic.arquivo
+(ns util.arquivo
   (:require [clojure.data.csv :as csv]
             [clojure.java.io :as io]))
 

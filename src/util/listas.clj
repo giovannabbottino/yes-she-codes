@@ -1,4 +1,4 @@
-(ns logic.listas)
+(ns util.listas)
 
 (defmulti item-lista? (fn [parametro] (class parametro)))
 

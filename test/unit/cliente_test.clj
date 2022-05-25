@@ -1,6 +1,6 @@
 (ns unit.cliente_test
   (:require [clojure.test :refer :all]
-            [logic.listas :refer :all]
+            [util.listas :refer :all]
             [logic.cliente :refer :all]
             [models.cliente :refer :all]))
 

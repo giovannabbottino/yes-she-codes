@@ -1,8 +1,8 @@
 (ns logic.cartao
   (:require [java-time :as t]
             [models.cartao :refer :all]
-            [logic.arquivo :refer :all]
-            [logic.listas :refer :all]
+            [util.arquivo :refer :all]
+            [util.listas :refer :all]
             [logic.cliente :refer :all]
             [clojure.string :as str])
   (:import (models.cartao Cartao)))

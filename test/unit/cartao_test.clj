@@ -1,6 +1,6 @@
 (ns unit.cartao-test
   (:require [clojure.test :refer :all]
-            [logic.listas :refer :all]
+            [util.listas :refer :all]
             [logic.cartao :refer :all]
             [models.cartao :refer :all]
             [java-time :as t]))

@@ -1,9 +1,9 @@
 (ns logic.compra
-  (:require [logic.listas :refer :all]
-            [logic.cartao :refer :all]
-            [logic.arquivo :refer :all]
-            [java-time :as t]
+  (:require [java-time :as t]
             [clojure.string :as str]
+            [util.listas :refer :all]
+            [util.arquivo :refer :all]
+            [logic.cartao :refer :all]
             [models.compra :refer :all])
   (:import (models.compra Compra)))
 

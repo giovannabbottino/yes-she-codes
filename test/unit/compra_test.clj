@@ -1,6 +1,6 @@
 (ns unit.compra-test
   (:require [clojure.test :refer :all]
-            [logic.listas :refer :all]
+            [util.listas :refer :all]
             [logic.compra :refer :all]
             [models.compra :refer :all]
             [java-time :as t]))

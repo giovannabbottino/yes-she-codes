@@ -1,12 +1,12 @@
 (ns logic.simulador
-  (:require [logic.listas :refer :all]
+  (:require [util.listas :refer :all]
             [logic.cliente :refer :all]
             [logic.cartao :refer :all]
             [logic.compra :refer :all]
             [java-time :as t]))
 
 
-(def repositorio-de-clientes (atom []))s
+(def repositorio-de-clientes (atom []))
 
 (csv->lista-clientes repositorio-de-clientes "../../arquivos/clientes.csv")
 

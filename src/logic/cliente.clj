@@ -1,8 +1,8 @@
 (ns logic.cliente
   (:require [clojure.string :as str]
             [models.cliente :refer :all]
-            [logic.arquivo :refer :all]
-            [logic.listas :refer :all])
+            [util.arquivo :refer :all]
+            [util.listas :refer :all])
   (:import (models.cliente Cliente)))
 
 (defn data->cliente [nome cpf email]
