@@ -1,8 +1,11 @@
 (ns unit.cliente_test
   (:require [clojure.test :refer :all]
+            [clojure.string :as str]
+            [schema.core :as s]
             [util.listas :refer :all]
             [logic.cliente :refer :all]
-            [models.cliente :refer :all]))
+            [models.cliente :refer :all])
+  (:import (models.cliente Cliente)))
 
 (deftest insere-item-test
   (testing "Testando insere-cliente multiplas vezes"
@@ -29,7 +32,6 @@
                                                                :id 0}]))
   (testing "Testando com cliente invalido"
     (is (thrown? Exception (insere-item! [] nil)))))
-
 
 (deftest lista-clientes-test
   (testing "Testando lista de clientes"
@@ -67,6 +69,7 @@
                                                                                           :cpf "333.444.555-66"
                                                                                           :email "viuva.casca.grossa@vingadoras.com.br"
                                                                                           :id 1})))))
+
 (deftest exclui-cliente!-test
   (testing "Testando excluir cliente pelo id"
     (let [repositorio-de-clientes (atom [])]
@@ -84,3 +87,26 @@
                                                                                    :cpf "999.123.456-78"
                                                                                    :email "mae.dos.dragoes@got.com"
                                                                                    :id 3}])))))
+
+(deftest validate-test
+  (testing "Testa se o cliente enviado é realmente valido"
+    (is (s/validate Cliente (Cliente.
+                              (str/lower-case "Viúva Negra")
+                              "333.444.555-66"
+                              (str/lower-case "viuva.casca.grossa@vingadoras.com.br")))))
+  (testing "Teste multipla vezes para cliente invalido"
+    (are [parametro-cliente] (thrown? Exception (s/validate Cliente parametro-cliente))
+                             [ (Cliente.
+                                 nil
+                                 "333.444.555-66"
+                                 (str/lower-case "viuva.casca.grossa@vingadoras.com.br")
+                                 )
+                              (Cliente.
+                                (str/lower-case "Viúva Negra")
+                                "333-444-555-66"
+                                (str/lower-case "viuva.casca.grossa@vingadoras.com.br")
+                                )
+                              (Cliente.
+                                (str/lower-case "Viúva Negra")
+                                "333.444.555-66"
+                                (str/lower-case "viuva.casca.grossa.com.br"))])))
