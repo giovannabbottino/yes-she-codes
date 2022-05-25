@@ -6,7 +6,7 @@
             [java-time :as t]))
 
 
-(def repositorio-de-clientes (atom []))
+(def repositorio-de-clientes (atom []))s
 
 (csv->lista-clientes repositorio-de-clientes "../../arquivos/clientes.csv")
 
