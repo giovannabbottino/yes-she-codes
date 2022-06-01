@@ -1,4 +1,4 @@
-(ns models.cartao
+(ns yes-she-codes.models.cartao
   (:require [java-time :as t]
             [schema.core :as s])
   (:import (java.time YearMonth)))

@@ -1,11 +1,11 @@
-(ns logic.cartao
+(ns yes-she-codes.logic.cartao
   (:require [java-time :as t]
-            [models.cartao :refer :all]
-            [util.arquivo :refer :all]
-            [util.listas :refer :all]
-            [logic.cliente :refer :all]
+            [yes-she-codes.models.cartao :refer :all]
+            [yes-she-codes.util.arquivo :refer :all]
+            [yes-she-codes.util.listas :refer :all]
+            [yes-she-codes.logic.cliente :refer :all]
             [clojure.string :as str])
-  (:import (models.cartao Cartao)))
+  (:import (yes_she_codes.models.cartao Cartao)))
 
 (defn data->cartao [numero cvv validade limite cpf]
   (Cartao.

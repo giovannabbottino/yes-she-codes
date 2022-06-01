@@ -1,9 +1,9 @@
-(ns logic.cliente
+(ns yes-she-codes.logic.cliente
   (:require [clojure.string :as str]
-            [models.cliente :refer :all]
-            [util.arquivo :refer :all]
-            [util.listas :refer :all])
-  (:import (models.cliente Cliente)))
+            [yes-she-codes.models.cliente :refer :all]
+            [yes-she-codes.util.arquivo :refer :all]
+            [yes-she-codes.util.listas :refer :all])
+  (:import (yes_she_codes.models.cliente Cliente)))
 
 (defn data->cliente [nome cpf email]
   (Cliente.

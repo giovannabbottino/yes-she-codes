@@ -1,4 +1,4 @@
-(ns models.compra
+(ns yes-she-codes.models.compra
   (:require [schema.core :as s]
             [java-time :as t])
   (:import (java.time LocalDate)))

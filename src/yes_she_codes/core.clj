@@ -1,8 +1,8 @@
-(ns logic.simulador
-  (:require [util.listas :refer :all]
-            [logic.cliente :refer :all]
-            [logic.cartao :refer :all]
-            [logic.compra :refer :all]
+(ns yes_she_codes.core
+  (:require [yes-she-codes.util.listas :refer :all]
+            [yes-she-codes.logic.cliente :refer :all]
+            [yes-she-codes.logic.cartao :refer :all]
+            [yes-she-codes.logic.compra :refer :all]
             [java-time :as t]))
 
 

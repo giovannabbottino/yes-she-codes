@@ -1,4 +1,4 @@
-(ns util.arquivo
+(ns yes-she-codes.util.arquivo
   (:require [clojure.data.csv :as csv]
             [clojure.java.io :as io]))
 

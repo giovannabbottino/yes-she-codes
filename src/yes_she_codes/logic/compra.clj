@@ -1,11 +1,11 @@
-(ns logic.compra
+(ns yes-she-codes.logic.compra
   (:require [java-time :as t]
             [clojure.string :as str]
-            [util.listas :refer :all]
-            [util.arquivo :refer :all]
-            [logic.cartao :refer :all]
-            [models.compra :refer :all])
-  (:import (models.compra Compra)))
+            [yes-she-codes.util.listas :refer :all]
+            [yes-she-codes.util.arquivo :refer :all]
+            [yes-she-codes.logic.cartao :refer :all]
+            [yes-she-codes.models.compra :refer :all])
+  (:import (yes_she_codes.models.compra Compra)))
 
 (defn data->compra [data valor estabelecimento categoria cartao]
   (Compra.

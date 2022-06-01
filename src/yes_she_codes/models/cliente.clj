@@ -1,4 +1,4 @@
-(ns models.cliente
+(ns yes-she-codes.models.cliente
   (:require [schema.core :as s]))
 
 (s/defrecord Cliente [

@@ -1,4 +1,4 @@
-(ns util.listas)
+(ns yes-she-codes.util.listas)
 
 (defmulti item-lista? (fn [parametro] (class parametro)))
 

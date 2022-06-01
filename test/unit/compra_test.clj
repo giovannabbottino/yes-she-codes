@@ -1,11 +1,11 @@
 (ns unit.compra-test
   (:require [clojure.test :refer :all]
-            [util.listas :refer :all]
-            [logic.compra :refer :all]
-            [models.compra :refer :all]
+            [yes-she-codes.util.listas :refer :all]
+            [yes-she-codes.logic.compra :refer :all]
+            [yes-she-codes.models.compra :refer :all]
             [schema.core :as s]
             [java-time :as t])
-  (:import (models.compra Compra)))
+  (:import (yes_she_codes.models.compra Compra)))
 
 (deftest insere-item!-test
   (testing "Testando insere compra!  multiplas vezes"

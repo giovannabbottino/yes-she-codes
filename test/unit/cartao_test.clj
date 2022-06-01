@@ -1,11 +1,11 @@
 (ns unit.cartao-test
   (:require [clojure.test :refer :all]
-            [util.listas :refer :all]
-            [logic.cartao :refer :all]
-            [models.cartao :refer :all]
+            [yes-she-codes.util.listas :refer :all]
+            [yes-she-codes.logic.cartao :refer :all]
+            [yes-she-codes.models.cartao :refer :all]
             [schema.core :as s]
             [java-time :as t])
-  (:import (models.cartao Cartao)))
+  (:import (yes_she_codes.models.cartao Cartao)))
 
 (deftest insere-item!-test
   (testing "Testando insere-item! multiplas vezes"
